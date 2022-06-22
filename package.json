@@ -1,0 +1,23 @@
+{
+  "name": "project-starter",
+  "private": true,
+  "packageManager": "pnpm@7.3.0",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "prettier": "prettier --write --cache ."
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm exec lint-staged --concurrent false"
+  },
+  "lint-staged": {
+    "*": [
+      "prettier --write --cache --ignore-unknown"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "lint-staged": "^13.0.2",
+    "prettier": "^2.7.1",
+    "simple-git-hooks": "^2.8.0"
+  }
+}
